@@ -42,8 +42,13 @@
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <div class="col-12 col-sm align-self-center">
+                <div class="col-12 col-sm-3 align-self-center text-center">
                     <img src="img/logo.png" class="img-fluid">
+                </div>
+                <div class="col-12 col-sm-3 align-self-center text-center">
+                    <a href="#reserve">
+                        <button type="submit" class="btn btn-warning btn-lg">Reserve Table</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -55,7 +60,7 @@
                 <h3>Our Lipsmacking Culinary Creations</h3>
             </div>
             <div class="col col-sm col-md order-sm-first">
-                <div class="media">
+                <div class="media d-sm-flex">
                     <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/uthappizza.png" alt="Uthappizza">
                     <div class ="media-body">
                         <h2 class="mt-0">Uthappizza<span class="badge bg-danger">HOT</span> <span class="badge rounded-pill bg-secondary ">Rs.200</span></h2>
@@ -71,12 +76,12 @@
                 <h3>This Month's Promotions</h3>
             </div>
             <div class="col col-sm col-md">
-                <div class="media">
-                        <img src="img/buffet.png" class="img-thumbnail align-self-center mr-3 d-flex " alt="buffet">
+                <div class="media d-sm-flex">
                     <div class="media-body">
                         <h2 class="mt-0">Weekend Grand Buffet</h2>
                         <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
                     </div>
+                    <img src="img/buffet.png" class="img-thumbnail align-self-center mr-3  " alt="buffet">
                 </div>
                 
             </div>
@@ -87,7 +92,7 @@
                 <h3>Meet our Culinary Specialists</h3>
             </div>
             <div class="col col-sm col-md order-sm-first">
-                <div class="media">
+                <div class="media d-sm-flex">
                     <img src="img/alberto.png" class="d-flex mr-3 img-thumbnail align-self-center media-left" alt="alberto">
                     <div class="media-body media-right">
                         <h2>Alberto Somayya</h2>
@@ -99,6 +104,64 @@
             </div>
         </div>
     </div>
+
+
+    <div class="card col-12 col-sm-8 offset-sm-2" id="reserve">
+        <h3 class="card-header bg-warning text-white text-center">Reserve Table</h3>
+        <div class="card-body">
+            <form>
+                <div class="form-group row">
+                    <label class="col-form-label col-12 col-md-2" for=numGuests>Number of Guests</label>
+                    <div class="col-12 col-sm-8 d-inline-flex">
+                        <div class="form-check col-2">
+                            <input type="radio" class="form-check-input" id="g-one" name="g-one">
+                            <label class="form-check-label" for="g-one">1</label>
+                        </div>
+
+                        <div class="form-check col-2">
+                            <input type="radio" class="form-check-input" id="g-two" name="g-two">
+                            <label class="form-check-label"for="g-two">2</label>
+                        </div>
+                        
+                        <div class="form-check col-2">
+                            <input type="radio" class="form-check-input" id="g-three" name="g-three">
+                            <label class="form-check-label" for="g-three">3</label>
+                        </div>
+                        
+                        <div class="form-check col-2">
+                            <input type="radio" class="form-check-input" id="g-four" name="g-four">
+                            <label class="form-check-label" for="g-four">4</label>
+                        </div>
+                        
+                        <div class="form-check col-2">
+                            <input type="radio" class="form-check-input" id="g-five" name="g-five">
+                            <label class="form-check-label" for="g-five">5</label>
+                        </div>
+                        
+                        <div class="form-check col-2">
+                            <input type="radio" class="form-check-input" id="g-six" name="g-six">
+                            <label class="form-check-label" for="g-six">6</label>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label col-12 col-md-2" for="dateAndTime">Date and Time</label>
+                    <div class="col-6 col-sm-4">
+                        <input type="date" class="form-control ">
+                    </div>
+                    <div class="col-6 col-sm-4 ">
+                        <input type="time" class="form-control" id="dateAndTime">
+                    </div>
+                </div><br/>
+                <div class ="col-12 col-md-4 col-lg-2 offset-md-2">
+                    <button type="submit" class="form-control btn btn-lg bg-primary text-white">Reserve</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+        <br/>
 
     <footer class="footer">
         <div class="container">
