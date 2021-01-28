@@ -20,7 +20,7 @@
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon">
-                </span>           
+                </span>
             </button>
 
             <a class="navbar-brand mr-auto" href="#"><img src="img/logo.png" height="30" width="41"></a>
@@ -135,6 +135,11 @@
                     <a class="carousel-control-next" href="#mycarousel" role="button" data-bs-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
+                    
+                    <button class="btn btn-danger btn-sm" id="carouselButton">
+                        <span id="carousel-button-icon" class="fa fa-pause"></span>
+                    </button>
+                      
                 </div>
             </div>
         </div>
@@ -257,32 +262,32 @@
                             <label class="col-form-label col-12 col-md-4" for=numGuests>Number of Guests</label>
                             <div class="col-12 col-md-8 d-inline-flex">
                                 <div class="form-check col-2">
-                                    <input type="radio" class="form-check-input" id="g-one" name="guestNo">
+                                    <input type="radio" class="form-check-input" id="g-one" name="guestNo" required>
                                     <label class="form-check-label" for="g-one">1</label>
                                 </div>
         
                                 <div class="form-check col-2">
-                                    <input type="radio" class="form-check-input" id="g-two" name="guestNo">
+                                    <input type="radio" class="form-check-input" id="g-two" name="guestNo" required>
                                     <label class="form-check-label"for="g-two">2</label>
                                 </div>
                                 
                                 <div class="form-check col-2">
-                                    <input type="radio" class="form-check-input" id="g-three" name="guestNo">
+                                    <input type="radio" class="form-check-input" id="g-three" name="guestNo" required>
                                     <label class="form-check-label" for="g-three">3</label>
                                 </div>
                                 
                                 <div class="form-check col-2">
-                                    <input type="radio" class="form-check-input" id="g-four" name="guestNo">
+                                    <input type="radio" class="form-check-input" id="g-four" name="guestNo"required>
                                     <label class="form-check-label" for="g-four">4</label>
                                 </div>
                                 
                                 <div class="form-check col-2">
-                                    <input type="radio" class="form-check-input" id="g-five" name="guestNo">
+                                    <input type="radio" class="form-check-input" id="g-five" name="guestNo"required>
                                     <label class="form-check-label" for="g-five">5</label>
                                 </div>
                                 
                                 <div class="form-check col-2">
-                                    <input type="radio" class="form-check-input" id="g-six" name="guestNo">
+                                    <input type="radio" class="form-check-input" id="g-six" name="guestNo"required>
                                     <label class="form-check-label" for="g-six">6</label>
                                 </div>                        
                             </div>
@@ -363,9 +368,18 @@
      <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
      <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
      <script>
-        $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();
-        });
+                    $("#carouselButton").click(function(){
+                if ($("#carouselButton").children("span").hasClass('fa-pause')) {
+                    $("#mycarousel").carousel('pause');
+                    $("#carouselButton").children("span").removeClass('fa-pause');
+                    $("#carouselButton").children("span").addClass('fa-play');
+                }
+                else if ($("#carouselButton").children("span").hasClass('fa-play')){
+                    $("#mycarousel").carousel('cycle');
+                    $("#carouselButton").children("span").removeClass('fa-play');
+                    $("#carouselButton").children("span").addClass('fa-pause');                    
+                }
+            });
     </script>
 </body>
 
